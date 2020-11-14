@@ -1,0 +1,2 @@
+run in background
+nohup ./run.sh > run.log  2>&1 &

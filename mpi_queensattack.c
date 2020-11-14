@@ -412,8 +412,8 @@ int main(int argc, char *argv[])
         timeval_subtract(&tvDiff, &tvEnd, &tvBegin);
         if (logMode == TRUE)
         {
-            FILE *pFile = fopen("QueensAttack.log", "a");
-            fprintf(pFile, "Core:%d\tk:%d\tN:%lu\ttime:%ld.%06ld\r\n", numprocs, attack, side, tvDiff.tv_sec, (long int)tvDiff.tv_usec);
+            FILE *pFile = fopen("QueensAttack.csv", "a");
+            fprintf(pFile, "%d,%d,%lu,%ld.%06ld\r\n", numprocs, attack, side, tvDiff.tv_sec, (long int)tvDiff.tv_usec);
             fclose(pFile);
         }
     }
