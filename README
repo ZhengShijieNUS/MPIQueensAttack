@@ -1,2 +1,6 @@
 run in background
 nohup ./run.sh > run.log  2>&1 &
+
+kill -9 pid
+
+kill -s 9 processname
