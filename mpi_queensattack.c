@@ -4,6 +4,8 @@
 
 #include <mpi.h>
 
+#define PRINTEVERYBOARD
+
 #define BLOCKSIZE 8
 #define EMPTY_CELL "[ ]"
 #define PIECE_CELL "[*]"
@@ -50,11 +52,6 @@ ULL size = 0;
 ULL blocks = 0;
 
 /// <summary>
-/// the number of pieces on the board
-/// </summary>
-ULL pieces = 0;
-
-/// <summary>
 /// the numer of pieces that every queen must attack
 /// </summary>
 BYTE attack = 0;
@@ -78,6 +75,25 @@ BOOL wraparound = FALSE;
 BYTE *InitializeBoard(ULL blocks, ULL size);
 
 void ReleaseBoard(BYTE board[]);
+
+/// <summary>
+/// Add a piece on board sequentially
+/// </summary>
+/// <param name="board">board address</param>
+/// <param name="size">board size</param>
+/// <returns>board address</returns>
+BYTE *AddPieceToBoard(BYTE board[], ULL blocks);
+
+/// <summary>
+/// Get how many pieces on the board
+/// </summary>
+/// <param name="board">board address</param>
+/// <param name="blocks">the number of blocks of the board</param>
+/// <param name="size">the number of the size of the board</param>
+/// <returns>the number of pieces</returns>
+ULL GetPiecesCount(BYTE board[], ULL blocks, ULL size);
+
+void PrintBoard(BYTE board[], ULL blocks, ULL size, UL side);
 
 int main(int argc, char *argv[])
 {
@@ -143,20 +159,41 @@ int main(int argc, char *argv[])
     //Initialize a new board
     BYTE *board = InitializeBoard(blocks, size);
 
+    /**
+     * the number of pieces on the board
+    */
+    ULL pieces = 0;
+
     int threadId = 0;
 
     while (pieces < size)
     {
         if (threadId == procid)
         {
-            
+            AddPieceToBoard(board, blocks);
+            pieces = GetPiecesCount(board, blocks, size);
+
+            // BOOL result = CheckBoard(board, size, side, attack, wraparound);
+            // if (result == TRUE)
+            // {
+            //     boardsCount++;
+
+            //     boards = (BOARD *)realloc(boards, boardsCount * sizeof(BOARD));
+            //     boards[boardsCount - 1].pieces = pieces;
+            //     boards[boardsCount - 1].board = InitializeBoard(blocks, size);
+            //     memcpy(boards[boardsCount - 1].board, board, blocks * sizeof(BYTE));
+            // }
+#ifdef PRINTEVERYBOARD
+            PrintBoard(board, blocks, size, side);
+            printf("pieces:%lld\r\n", pieces);
+            printf("--------------------------------------------\r\n");
+#endif
         }
 
         if (++threadId >= numprocs)
         {
             threadId = 0;
         }
-        pieces++;
     }
 
     //Release board
@@ -177,4 +214,107 @@ BYTE *InitializeBoard(ULL blocks, ULL size)
 void ReleaseBoard(BYTE board[])
 {
     free(board);
+}
+
+BYTE *AddPieceToBoard(BYTE board[], ULL blocks)
+{
+    BOOL carry = FALSE;
+    unsigned int block = 0;
+
+    if (++board[0] == 0)
+    {
+        carry = TRUE;
+    }
+    else
+    {
+        carry = FALSE;
+    }
+
+    for (block = 1; block < blocks; block++)
+    {
+        if (carry == TRUE)
+        {
+            if (++board[block] == 0)
+            {
+                carry = TRUE;
+            }
+            else
+            {
+                carry = FALSE;
+            }
+        }
+        else
+        {
+            break;
+        }
+    }
+    return board;
+}
+
+ULL GetPiecesCount(BYTE board[], ULL blocks, ULL size)
+{
+    unsigned int pieces = 0;
+    do
+    {
+        blocks--;
+        unsigned int bit = 0;
+        do
+        {
+            bit = --size % 8;
+            if ((board[blocks] & 1 << bit) > 0)
+            {
+                pieces++;
+            }
+            else
+            {
+            }
+
+        } while (bit > 0);
+    } while (blocks > 0);
+    return pieces;
+}
+
+void PrintBoard(BYTE board[], ULL blocks, ULL size, UL side)
+{
+    /*
+	* 假设有如下5*5棋盘
+	* 10110
+	* 01110
+	* 00001
+	* 11011
+	* 10010
+	* 总共25个位置，需要25个bit存储，但每8bit为一字节，所以需要4个字节(32个bit)
+	* 高位在左，低位在右，右对齐
+	* 76543210 size除以8的余数，左移相应位数，表示当前需要获取的bit
+	*  byte[3]  byte[2]	 byte[1]  byte[0]
+	* 01234567 01234567 01234567 01234567	//每个字节内表示棋子状态
+	* -------1 01100111 00000111 01110010	//棋子
+	*
+	* (1 << 0) = 00000001
+	* (1 << 1) = 00000010
+	* (1 << 2) = 00000100
+	* (1 << 3) = 00001000
+	* (1 << 4) = 00010000
+	* (1 << 5) = 00100000
+	* (1 << 6) = 01000000
+	* (1 << 7) = 10000000
+	*/
+
+    do
+    {
+
+        //从0开始，所以需要最大数减一
+        blocks--;
+        BYTE bit = 0;
+        do
+        {
+            //size也是从0开始，计算时需要最大数减一
+            bit = --size % 8;
+            //通过按位与运算得知该位是否为1
+            printf((board[blocks] & 1 << bit) > 0 ? PIECE_CELL : EMPTY_CELL);
+            //如果当前bit刚好可以整除边长，说明需要换行
+            if (size % side == 0)
+                printf("\r\n");
+        } while (bit > 0); //当bit大于0时，说明仍需要取下一位，
+    } while (blocks > 0);  //当blocks大于0时，说明仍然需要取下一字节
 }
