@@ -165,17 +165,17 @@ BOOL CheckRightbottom(BYTE board[], COORDINATE coordinate, ULL blocks, ULL size,
 
 ULL GetMaxPiecesFromBoards(BOARD boards[], ULL boardsCount);
 
-void ExportResult(BOARD boards[],ULL maxPieces,ULL boardsCount,int procid, int numprocs);
+void ExportResult(BOARD boards[], ULL maxPieces, ULL boardsCount, int procid, int numprocs);
 
 void mpi_print(int procid, int numprocs, const char *format, ...);
 
-#define _p(msg) mpi_print(procid, numprocs, msg)
+#define _p(fmt, ...) mpi_print(procid, numprocs, fmt, ##__VA_ARGS__)
 void mpi_print(int procid, int numprocs, const char *format, ...)
 {
     printf("[%d/%d]", procid, numprocs);
     va_list valist;
     va_start(valist, format);
-    printf(format, valist);
+    vprintf(format, valist);
     va_end(valist);
 }
 
@@ -237,7 +237,7 @@ int main(int argc, char *argv[])
         exit(1);
     }
 
-    printf("Run in process:%d/%d with %llu(%lu*%lu) board in %llu blocks(bytes),every queen must attack %d.\r\n", procid, numprocs, size, side, side, blocks, attack);
+    _p("Run with %llu(%lu*%lu) board in %llu blocks(bytes),every queen must attack %d.\r\n", size, side, side, blocks, attack);
 
     //Initialize a new board
     BYTE *board = InitializeBoard(blocks, size);
@@ -297,9 +297,9 @@ int main(int argc, char *argv[])
         }
     }
 
-    // _p("All boards exhausted.\r\n");
+    _p("All boards exhausted.\r\n");
     ULL maxPieces = GetMaxPiecesFromBoards(boards, boardsCount);
-    printf("[%d/%d]Max pieces:%llu\r\n", procid, numprocs, maxPieces);
+    _p("Max pieces:%llu\r\n", maxPieces);
 
     if (procid == 0)
     {
@@ -321,7 +321,7 @@ int main(int argc, char *argv[])
                 maxPieces = max;
             }
         }
-        printf("[%d/%d]Final max pieces:%llu\r\n", procid, numprocs, maxPieces);
+        _p("Final max pieces:%llu\r\n", maxPieces);
     }
     else
     {
@@ -341,29 +341,35 @@ int main(int argc, char *argv[])
     //Export result
 
     int exportResult = 0;
-    MPI_Status status; 
+    MPI_Status status;
 
-    if(procid == 0){
-        ExportResult(boards,maxPieces,boardsCount,procid,numprocs);
-        MPI_Send(&exportResult,1,MPI_INT,procid+1,MPI_TAG_EXPORT_RESULT,MPI_COMM_WORLD);
-    }else{
-        if(procid != numprocs-1){
-            MPI_Recv(&exportResult,1,MPI_INT,procid-1,MPI_TAG_EXPORT_RESULT,MPI_COMM_WORLD,&status);
-            ExportResult(boards,maxPieces,boardsCount,procid,numprocs);
-            MPI_Send(&exportResult,1,MPI_INT,procid+1,MPI_TAG_EXPORT_RESULT,MPI_COMM_WORLD);
-        }else{
-            MPI_Recv(&exportResult,1,MPI_INT,procid-1,MPI_TAG_EXPORT_RESULT,MPI_COMM_WORLD,&status);
-            ExportResult(boards,maxPieces,boardsCount,procid,numprocs);
+    if (procid == 0)
+    {
+        // ExportResult(boards, maxPieces, boardsCount, procid, numprocs);
+        MPI_Send(&exportResult, 1, MPI_INT, procid + 1, MPI_TAG_EXPORT_RESULT, MPI_COMM_WORLD);
+    }
+    else
+    {
+        if (procid != numprocs - 1)
+        {
+            MPI_Recv(&exportResult, 1, MPI_INT, procid - 1, MPI_TAG_EXPORT_RESULT, MPI_COMM_WORLD, &status);
+            // ExportResult(boards, maxPieces, boardsCount, procid, numprocs);
+            MPI_Send(&exportResult, 1, MPI_INT, procid + 1, MPI_TAG_EXPORT_RESULT, MPI_COMM_WORLD);
+        }
+        else
+        {
+            MPI_Recv(&exportResult, 1, MPI_INT, procid - 1, MPI_TAG_EXPORT_RESULT, MPI_COMM_WORLD, &status);
+            // ExportResult(boards, maxPieces, boardsCount, procid, numprocs);
         }
     }
 
     //Release board
     ReleaseBoard(board);
-    do
+    while (boardsCount > 0)
     {
         boardsCount--;
         free(boards[boardsCount].board);
-    } while (boardsCount > 0);
+    }
     free(boards);
 
     MPI_Finalize();
@@ -386,7 +392,7 @@ ULL GetMaxPiecesFromBoards(BOARD boards[], ULL boardsCount)
     return maxPieces;
 }
 
-void ExportResult(BOARD boards[],ULL maxPieces,ULL boardsCount,int procid, int numprocs)
+void ExportResult(BOARD boards[], ULL maxPieces, ULL boardsCount, int procid, int numprocs)
 {
     //Export result
     // ULL maxPieces = 0;
@@ -406,7 +412,7 @@ void ExportResult(BOARD boards[],ULL maxPieces,ULL boardsCount,int procid, int n
     {
         if (boards[i].pieces == maxPieces)
         {
-            printf("[%d/%d]%lu, %d:%llu:", procid, numprocs, side, attack, maxPieces);
+            _p("%lu, %d:%llu:", side, attack, maxPieces);
             if (printlocation == TRUE)
             {
                 PrintBoardIndex(boards[i].board, blocks, size, side);
