@@ -12,6 +12,7 @@
 
 #define MPI_TAG_MAX_PIECES 0
 #define MPI_BCAST_ROOT 0
+#define MPI_TAG_EXPORT_RESULT 1
 
 typedef unsigned long long ULL;
 typedef unsigned long UL;
@@ -164,6 +165,8 @@ BOOL CheckRightbottom(BYTE board[], COORDINATE coordinate, ULL blocks, ULL size,
 
 ULL GetMaxPiecesFromBoards(BOARD boards[], ULL boardsCount);
 
+void ExportResult(BOARD boards[],ULL maxPieces,ULL boardsCount,int procid, int numprocs);
+
 void mpi_print(int procid, int numprocs, const char *format, ...);
 
 #define _p(msg) mpi_print(procid, numprocs, msg)
@@ -294,7 +297,7 @@ int main(int argc, char *argv[])
         }
     }
 
-    _p("All boards exhausted.\r\n");
+    // _p("All boards exhausted.\r\n");
     ULL maxPieces = GetMaxPiecesFromBoards(boards, boardsCount);
     printf("[%d/%d]Max pieces:%llu\r\n", procid, numprocs, maxPieces);
 
@@ -336,40 +339,21 @@ int main(int argc, char *argv[])
     MPI_Bcast(&maxPieces, 1, MPI_UNSIGNED_LONG_LONG, MPI_BCAST_ROOT, MPI_COMM_WORLD);
 
     //Export result
-    
+
+    int exportResult = 0;
+    MPI_Status status; 
+
     if(procid == 0){
-        ExportResult();
-        MPI_Send(procid+1);
+        ExportResult(boards,maxPieces,boardsCount,procid,numprocs);
+        MPI_Send(&exportResult,1,MPI_INT,procid+1,MPI_TAG_EXPORT_RESULT,MPI_COMM_WORLD);
     }else{
         if(procid != numprocs-1){
-            MPI_Recv(procid-1,);
-            ExportResult();
-            MPI_Send(procid+1,);
+            MPI_Recv(&exportResult,1,MPI_INT,procid-1,MPI_TAG_EXPORT_RESULT,MPI_COMM_WORLD,&status);
+            ExportResult(boards,maxPieces,boardsCount,procid,numprocs);
+            MPI_Send(&exportResult,1,MPI_INT,procid+1,MPI_TAG_EXPORT_RESULT,MPI_COMM_WORLD);
         }else{
-            MPI_Recv(procid-1,);
-            ExportResult();
-        }
-    }
-
-    ULL i = 0;
-    for (i = 0; i < boardsCount; i++)
-    {
-        if (boards[i].pieces == maxPieces)
-        {
-            printf("[%d/%d]%lu, %d:%llu:", procid, numprocs, side, attack, maxPieces);
-            if (printlocation == TRUE)
-            {
-                PrintBoardIndex(boards[i].board, blocks, size, side);
-            }
-            else
-            {
-                printf("\r\n");
-            }
-
-#ifdef PRINTBOARD
-            PrintBoard(boards[i].board, blocks, size, side);
-            printf("--------------------------------------------\r\n");
-#endif
+            MPI_Recv(&exportResult,1,MPI_INT,procid-1,MPI_TAG_EXPORT_RESULT,MPI_COMM_WORLD,&status);
+            ExportResult(boards,maxPieces,boardsCount,procid,numprocs);
         }
     }
 
@@ -402,42 +386,43 @@ ULL GetMaxPiecesFromBoards(BOARD boards[], ULL boardsCount)
     return maxPieces;
 }
 
-// void ExportResult()
-// {
-//     //Export result
-//     ULL maxPieces = 0;
-//     ULL i = 0;
-//     for (i = 0; i < boardsCount; i++)
-//     {
-//         if (boards[i].pieces > maxPieces)
-//         {
-//             maxPieces = boards[i].pieces;
-//         }
-//     }
+void ExportResult(BOARD boards[],ULL maxPieces,ULL boardsCount,int procid, int numprocs)
+{
+    //Export result
+    // ULL maxPieces = 0;
+    // ULL i = 0;
+    // for (i = 0; i < boardsCount; i++)
+    // {
+    //     if (boards[i].pieces > maxPieces)
+    //     {
+    //         maxPieces = boards[i].pieces;
+    //     }
+    // }
 
-//     printf("Max pieces is:%llu.\r\n", maxPieces);
+    // printf("Max pieces is:%llu.\r\n", maxPieces);
 
-//     for (i = 0; i < boardsCount; i++)
-//     {
-//         if (boards[i].pieces == maxPieces)
-//         {
-//             printf("%lu, %d:%llu:", side, attack, maxPieces);
-//             if (printlocation == TRUE)
-//             {
-//                 // PrintBoardIndex(boards[i].board, blocks, size, side);
-//             }
-//             else
-//             {
-//                 printf("\r\n");
-//             }
+    ULL i = 0;
+    for (i = 0; i < boardsCount; i++)
+    {
+        if (boards[i].pieces == maxPieces)
+        {
+            printf("[%d/%d]%lu, %d:%llu:", procid, numprocs, side, attack, maxPieces);
+            if (printlocation == TRUE)
+            {
+                PrintBoardIndex(boards[i].board, blocks, size, side);
+            }
+            else
+            {
+                printf("\r\n");
+            }
 
-// #ifdef PRINTBOARD
-//             PrintBoard(boards[i].board, blocks, size, side);
-//             printf("--------------------------------------------\r\n");
-// #endif
-//         }
-//     }
-// }
+#ifdef PRINTBOARD
+            PrintBoard(boards[i].board, blocks, size, side);
+            printf("--------------------------------------------\r\n");
+#endif
+        }
+    }
+}
 
 BYTE *InitializeBoard(ULL blocks, ULL size)
 {
