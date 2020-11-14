@@ -3,7 +3,8 @@
 #include <stdbool.h>
 #include <string.h>
 #include <stdarg.h>
-
+#include <sys/time.h>
+#include <time.h>
 #include <mpi.h>
 
 #define BLOCKSIZE 8
@@ -11,7 +12,7 @@
 #define PIECE_CELL "[*]"
 
 #define MPI_TAG_MAX_PIECES 0
-#define MPI_BCAST_ROOT 0
+#define MPI_MASTER_PROCESS 0
 #define MPI_TAG_EXPORT_RESULT 1
 
 typedef unsigned long long ULL;
@@ -86,6 +87,11 @@ BOOL printlocation = FALSE;
 /// wraparound
 /// </summary>
 BOOL wraparound = FALSE;
+
+BOOL logMode = FALSE;
+
+#define LINEMAX 1024
+char *outputLine;
 
 /// <summary>
 /// Initialize a new board
@@ -167,16 +173,22 @@ ULL GetMaxPiecesFromBoards(BOARD boards[], ULL boardsCount);
 
 void ExportResult(BOARD boards[], ULL maxPieces, ULL boardsCount, int procid, int numprocs);
 
+int timeval_subtract(struct timeval *result, struct timeval *t2, struct timeval *t1);
+void timeval_print(struct timeval *tv);
+
 void mpi_print(int procid, int numprocs, const char *format, ...);
 
 #define _p(fmt, ...) mpi_print(procid, numprocs, fmt, ##__VA_ARGS__)
 void mpi_print(int procid, int numprocs, const char *format, ...)
 {
-    printf("[%d/%d]", procid, numprocs);
-    va_list valist;
-    va_start(valist, format);
-    vprintf(format, valist);
-    va_end(valist);
+    if (logMode == TRUE)
+    {
+        printf("[%d/%d]", procid, numprocs);
+        va_list valist;
+        va_start(valist, format);
+        vprintf(format, valist);
+        va_end(valist);
+    }
 }
 
 int main(int argc, char *argv[])
@@ -186,14 +198,16 @@ int main(int argc, char *argv[])
     MPI_Comm_rank(MPI_COMM_WORLD, &procid);
     MPI_Comm_size(MPI_COMM_WORLD, &numprocs);
 
-    if (argc == 5)
+    struct timeval tvBegin, tvEnd, tvDiff;
+
+    if (argc == 5 || argc == 6)
     {
 
         side = (UL)atol(argv[1]); //the size of a side of the board
         if (side > 4294967295)
         {
             printf("N must be less than 4294967295\r\n");
-            exit(1);
+            exit(EXIT_FAILURE);
         }
         size = side * side;
 
@@ -201,7 +215,7 @@ int main(int argc, char *argv[])
         if (attack > 9 || attack < 0)
         {
             printf("k must be between 0 and 9.\r\n");
-            exit(1);
+            exit(EXIT_FAILURE);
         }
 
         if (atoi(argv[3]) == 0) //format
@@ -222,6 +236,18 @@ int main(int argc, char *argv[])
             wraparound = TRUE;
         }
 
+        if (argc == 6)
+        {
+            if (atoi(argv[5]) == 1)
+            {
+                logMode = TRUE;
+            }
+            else
+            {
+                logMode = FALSE;
+            }
+        }
+
         /*
 		* calcuate how many bytes are needed that store the whole board, 如果不能整除8，则再加一个字节
 		*/
@@ -229,12 +255,20 @@ int main(int argc, char *argv[])
     }
     else
     {
-        printf("Usage: %s N k l w\r\n", argv[0]);
-        printf("\t*N is the size of a side of the board\r\n");
-        printf("\t*k is the numer of pieces that every queen must attack\r\n");
-        printf("\t*l = 0 is short format N, k:number: and l = 1 is long format N, k : number : pc1, pc2, pc3...\r\n");
-        printf("\t*w = 0 is no wraparound, w = 1 is wraparound\r\n");
-        exit(1);
+        if (procid == MPI_MASTER_PROCESS)
+        {
+            printf("Usage: %s N k l w\r\n", argv[0]);
+            printf("\t*N is the size of a side of the board\r\n");
+            printf("\t*k is the numer of pieces that every queen must attack\r\n");
+            printf("\t*l = 0 is short format N, k:number: and l = 1 is long format N, k : number : pc1, pc2, pc3...\r\n");
+            printf("\t*w = 0 is no wraparound, w = 1 is wraparound\r\n");
+        }
+        exit(EXIT_FAILURE);
+    }
+
+    if (procid == MPI_MASTER_PROCESS)
+    {
+        gettimeofday(&tvBegin, NULL);
     }
 
     _p("Run with %llu(%lu*%lu) board in %llu blocks(bytes),every queen must attack %d.\r\n", size, side, side, blocks, attack);
@@ -301,7 +335,7 @@ int main(int argc, char *argv[])
     ULL maxPieces = GetMaxPiecesFromBoards(boards, boardsCount);
     _p("Max pieces:%llu\r\n", maxPieces);
 
-    if (procid == 0)
+    if (procid == MPI_MASTER_PROCESS)
     {
         //Waiting for result
         // int MPI_Recv(void *buf, int count, MPI_Datatype datatype, int source, int tag,MPI_Comm comm, MPI_Status * status)
@@ -336,16 +370,16 @@ int main(int argc, char *argv[])
     }
 
     //int MPI_Bcast(void *buffer, int count, MPI_Datatype datatype, int root, MPI_Comm comm)
-    MPI_Bcast(&maxPieces, 1, MPI_UNSIGNED_LONG_LONG, MPI_BCAST_ROOT, MPI_COMM_WORLD);
+    MPI_Bcast(&maxPieces, 1, MPI_UNSIGNED_LONG_LONG, MPI_MASTER_PROCESS, MPI_COMM_WORLD);
 
     //Export result
 
     int exportResult = 0;
     MPI_Status status;
 
-    if (procid == 0)
+    if (procid == MPI_MASTER_PROCESS)
     {
-        // ExportResult(boards, maxPieces, boardsCount, procid, numprocs);
+        ExportResult(boards, maxPieces, boardsCount, procid, numprocs);
         MPI_Send(&exportResult, 1, MPI_INT, procid + 1, MPI_TAG_EXPORT_RESULT, MPI_COMM_WORLD);
     }
     else
@@ -353,13 +387,13 @@ int main(int argc, char *argv[])
         if (procid != numprocs - 1)
         {
             MPI_Recv(&exportResult, 1, MPI_INT, procid - 1, MPI_TAG_EXPORT_RESULT, MPI_COMM_WORLD, &status);
-            // ExportResult(boards, maxPieces, boardsCount, procid, numprocs);
+            ExportResult(boards, maxPieces, boardsCount, procid, numprocs);
             MPI_Send(&exportResult, 1, MPI_INT, procid + 1, MPI_TAG_EXPORT_RESULT, MPI_COMM_WORLD);
         }
         else
         {
             MPI_Recv(&exportResult, 1, MPI_INT, procid - 1, MPI_TAG_EXPORT_RESULT, MPI_COMM_WORLD, &status);
-            // ExportResult(boards, maxPieces, boardsCount, procid, numprocs);
+            ExportResult(boards, maxPieces, boardsCount, procid, numprocs);
         }
     }
 
@@ -372,9 +406,21 @@ int main(int argc, char *argv[])
     }
     free(boards);
 
+    if (procid == MPI_MASTER_PROCESS)
+    {
+        gettimeofday(&tvEnd, NULL);
+        timeval_subtract(&tvDiff, &tvEnd, &tvBegin);
+        if (logMode == TRUE)
+        {
+            FILE *pFile = fopen("QueensAttack.log", "a");
+            fprintf(pFile, "Core:%d\tk:%d\tN:%lu\ttime:%ld.%06ld\r\n", numprocs, attack, side, tvDiff.tv_sec, (long int)tvDiff.tv_usec);
+            fclose(pFile);
+        }
+    }
     MPI_Finalize();
+
     //exit with success
-    exit(0);
+    exit(EXIT_SUCCESS);
 }
 
 ULL GetMaxPiecesFromBoards(BOARD boards[], ULL boardsCount)
@@ -412,7 +458,7 @@ void ExportResult(BOARD boards[], ULL maxPieces, ULL boardsCount, int procid, in
     {
         if (boards[i].pieces == maxPieces)
         {
-            _p("%lu, %d:%llu:", side, attack, maxPieces);
+            printf("%lu, %d:%llu:", side, attack, maxPieces);
             if (printlocation == TRUE)
             {
                 PrintBoardIndex(boards[i].board, blocks, size, side);
@@ -1110,4 +1156,25 @@ BOOL GetPieceOnBoard(BYTE board[], ULL blocks, ULL size, ULL cell)
     printf("cell:%llu, bit:%d, block:%llu\r\n", cell, bit, block);
 #endif
     return (board[block] & 1 << bit) ? TRUE : FALSE;
+}
+
+/* Return 1 if the difference is negative, otherwise 0.  */
+int timeval_subtract(struct timeval *result, struct timeval *t2, struct timeval *t1)
+{
+    long int diff = (t2->tv_usec + 1000000 * t2->tv_sec) - (t1->tv_usec + 1000000 * t1->tv_sec);
+    result->tv_sec = diff / 1000000;
+    result->tv_usec = diff % 1000000;
+
+    return (diff < 0);
+}
+
+void timeval_print(struct timeval *tv)
+{
+    char buffer[30];
+    time_t curtime;
+
+    printf("%ld.%06ld", tv->tv_sec, (long int)tv->tv_usec);
+    curtime = tv->tv_sec;
+    strftime(buffer, 30, "%m-%d-%Y  %T", localtime(&curtime));
+    printf(" = %s.%06ld\n", buffer, (long int)tv->tv_usec);
 }

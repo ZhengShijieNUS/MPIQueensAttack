@@ -1,0 +1,86 @@
+[1/28]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 3.
+[3/28]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 3.
+[7/28]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 3.
+[8/28]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 3.
+[9/28]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 3.
+[10/28]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 3.
+[13/28][15/28]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 3.
+[16/28]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 3.
+[17/28]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 3.
+[19/28]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 3.
+[21/28]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 3.
+[22/28]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 3.
+[24/28]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 3.
+[26/28]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 3.
+[27/28]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 3.
+[2/28]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 3.
+[4/28]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 3.
+[5/28]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 3.
+[11/28]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 3.
+[12/28]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 3.
+[14/28]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 3.
+[23/28]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 3.
+[25/28]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 3.
+Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 3.
+[18/28]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 3.
+[23/28]All boards exhausted.
+[23/28]Max pieces:6
+[15/28]All boards exhausted.
+[15/28]Max pieces:6
+[1/28]All boards exhausted.
+[1/28]Max pieces:6
+[17/28]All boards exhausted.
+[17/28]Max pieces:6
+[21/28]All boards exhausted.
+[21/28]Max pieces:6
+[27/28]All boards exhausted.
+[27/28]Max pieces:6
+[3/28]All boards exhausted.
+[3/28]Max pieces:6
+[5/28]All boards exhausted.
+[5/28]Max pieces:6
+[7/28]All boards exhausted.
+[7/28]Max pieces:6
+[9/28]All boards exhausted.
+[9/28]Max pieces:6
+[25/28]All boards exhausted.
+[25/28]Max pieces:6
+[19/28]All boards exhausted.
+[19/28]Max pieces:6
+[11/28]All boards exhausted.
+[11/28]Max pieces:6
+[8/28][2/28]All boards exhausted.
+[2/28]Max pieces:6
+[12/28]All boards exhausted.
+[12/28]Max pieces:8
+[22/28]All boards exhausted.
+[22/28]Max pieces:8
+[26/28]All boards exhausted.
+[26/28]Max pieces:8
+[13/28]All boards exhausted.
+[13/28]Max pieces:6
+[16/28]All boards exhausted.
+[16/28]Max pieces:6
+[24/28]All boards exhausted.
+[24/28]Max pieces:8
+All boards exhausted.
+[8/28]Max pieces:8
+[10/28]All boards exhausted.
+[10/28]Max pieces:0
+[18/28]All boards exhausted.
+[18/28]Max pieces:0
+[14/28][4/28]All boards exhausted.
+[6/28]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 3.
+[14/28]Max pieces:6
+[0/28]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 3.
+[20/28]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 3.
+All boards exhausted.
+[4/28]Max pieces:8
+[6/28]All boards exhausted.
+[6/28]Max pieces:8
+[20/28][0/28]All boards exhausted.
+[0/28]Max pieces:8
+All boards exhausted.
+[20/28]Max pieces:6
+[0/28]Final max pieces:8
+[0/28]and time taken is 0.026044 secs
