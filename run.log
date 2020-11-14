@@ -1,260 +1,644 @@
 nohup: ignoring input
-[0/2][1/2]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 3.
-Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 3.
-[1/2]All boards exhausted.
-[1/2]Max pieces:4
-[0/2]All boards exhausted.
-[0/2]Max pieces:6
-[0/2]Final max pieces:6
-3, 3:6:1,3,6,7,8,9,
-3, 3:6:1,3,4,7,8,9,
-3, 3:6:1,3,4,6,7,9,
-3, 3:6:1,2,3,7,8,9,
-3, 3:6:1,2,3,6,7,9,
-3, 3:6:1,2,3,4,7,9,
-[1/2][0/2]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 3.
-Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 3.
-[1/2]All boards exhausted.
-[1/2]Max pieces:6
-[0/2]All boards exhausted.
-[0/2]Max pieces:8
-[0/2]Final max pieces:8
-4, 3:8:1,4,8,12,13,14,15,16,
-4, 3:8:1,4,7,9,13,14,15,16,
-4, 3:8:1,4,7,8,9,10,13,16,
-4, 3:8:1,4,6,12,13,14,15,16,
-4, 3:8:1,4,6,8,12,13,15,16,
-4, 3:8:1,4,5,9,13,14,15,16,
-4, 3:8:1,4,5,8,9,12,13,16,
-4, 3:8:1,4,5,7,9,13,14,16,
-4, 3:8:1,4,5,6,11,12,13,16,
-4, 3:8:1,3,4,8,10,12,13,16,
-4, 3:8:1,3,4,7,10,13,14,16,
-4, 3:8:1,2,4,6,11,13,15,16,
-4, 3:8:1,2,4,5,9,11,13,16,
-4, 3:8:1,2,3,4,13,14,15,16,
-4, 3:8:1,2,3,4,8,12,13,16,
-4, 3:8:1,2,3,4,8,10,13,16,
-4, 3:8:1,2,3,4,5,11,13,16,
-4, 3:8:1,2,3,4,5,9,13,16,
-[1/2][0/2]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 3.
-Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 3.
-[1/2]All boards exhausted.
-[1/2]Max pieces:10
-[0/2]All boards exhausted.
-[0/2]Max pieces:10
-[0/2]Final max pieces:10
-5, 3:10:4,5,7,9,11,16,18,20,23,25,
-5, 3:10:4,5,7,8,11,15,16,21,24,25,
-5, 3:10:4,5,6,7,14,15,16,17,24,25,
-5, 3:10:3,5,6,8,10,11,17,19,24,25,
-5, 3:10:3,4,7,14,15,16,17,21,24,25,
-5, 3:10:3,4,5,7,12,16,20,21,23,25,
-5, 3:10:2,4,7,9,16,18,20,21,23,25,
-5, 3:10:2,4,5,6,7,15,16,21,23,25,
-5, 3:10:2,3,9,11,12,19,20,21,22,25,
-5, 3:10:1,5,10,15,20,21,22,23,24,25,
-5, 3:10:1,5,10,14,15,16,17,21,24,25,
-5, 3:10:1,5,10,11,20,21,22,23,24,25,
-5, 3:10:1,5,10,11,15,20,21,22,24,25,
-5, 3:10:1,5,10,11,15,18,21,22,24,25,
-5, 3:10:1,5,10,11,15,18,20,21,22,25,
-5, 3:10:1,5,10,11,15,16,18,21,24,25,
-5, 3:10:1,5,10,11,15,16,18,20,21,25,
-5, 3:10:1,5,10,11,12,15,18,21,24,25,
-5, 3:10:1,5,10,11,12,15,18,20,21,25,
-5, 3:10:1,5,10,11,12,14,15,16,21,25,
-5, 3:10:1,5,9,11,16,21,22,23,24,25,
-5, 3:10:1,5,9,10,11,16,20,21,23,25,
-5, 3:10:1,5,8,10,12,16,21,23,24,25,
-5, 3:10:1,5,8,10,11,12,15,20,21,25,
-5, 3:10:1,5,8,9,11,12,20,21,22,25,
-5, 3:10:1,5,7,15,20,21,22,23,24,25,
-5, 3:10:1,5,7,10,15,20,21,23,24,25,
-5, 3:10:1,5,7,10,15,16,20,21,23,25,
-5, 3:10:1,5,7,9,16,18,20,21,23,25,
-5, 3:10:1,5,7,8,14,15,16,21,24,25,
-5, 3:10:1,5,6,15,16,21,22,23,24,25,
-5, 3:10:1,5,6,11,16,21,22,23,24,25,
-5, 3:10:1,5,6,11,15,18,21,22,24,25,
-5, 3:10:1,5,6,11,15,18,20,21,22,25,
-5, 3:10:1,5,6,11,15,16,21,22,24,25,
-5, 3:10:1,5,6,11,15,16,18,21,24,25,
-5, 3:10:1,5,6,11,15,16,18,20,21,25,
-5, 3:10:1,5,6,11,14,15,18,21,22,25,
-5, 3:10:1,5,6,11,14,15,16,18,21,25,
-5, 3:10:1,5,6,11,12,19,20,21,22,25,
-5, 3:10:1,5,6,11,12,14,15,20,21,25,
-5, 3:10:1,5,6,10,15,16,20,21,23,25,
-5, 3:10:1,5,6,10,11,16,20,21,23,25,
-5, 3:10:1,5,6,10,11,15,16,20,21,25,
-5, 3:10:1,5,6,9,11,16,21,22,23,25,
-5, 3:10:1,5,6,9,11,16,20,21,23,25,
-5, 3:10:1,5,6,8,14,20,21,22,23,25,
-5, 3:10:1,5,6,8,11,14,15,16,21,25,
-5, 3:10:1,5,6,8,10,11,15,20,21,25,
-5, 3:10:1,5,6,8,10,11,15,16,21,25,
-5, 3:10:1,5,6,7,15,16,20,21,23,25,
-5, 3:10:1,4,7,14,15,16,17,23,24,25,
-5, 3:10:1,4,7,9,15,16,18,20,23,25,
-5, 3:10:1,4,6,10,15,16,17,20,23,25,
-5, 3:10:1,4,5,9,18,20,21,22,23,25,
-5, 3:10:1,4,5,8,12,15,20,21,22,25,
-5, 3:10:1,4,5,8,11,12,20,21,22,25,
-5, 3:10:1,4,5,8,11,12,15,20,21,25,
-5, 3:10:1,4,5,7,15,21,22,23,24,25,
-5, 3:10:1,4,5,7,14,15,17,21,24,25,
-5, 3:10:1,4,5,7,12,18,20,21,23,25,
-5, 3:10:1,4,5,6,14,15,18,21,22,25,
-5, 3:10:1,4,5,6,14,15,17,18,21,25,
-5, 3:10:1,4,5,6,12,18,20,21,23,25,
-5, 3:10:1,4,5,6,11,15,17,18,24,25,
-5, 3:10:1,4,5,6,11,14,18,21,22,25,
-5, 3:10:1,4,5,6,8,11,15,20,21,25,
-5, 3:10:1,4,5,6,8,11,15,16,21,25,
-5, 3:10:1,4,5,6,7,15,16,21,23,25,
-5, 3:10:1,4,5,6,7,14,15,20,21,25,
-5, 3:10:1,3,6,9,14,16,20,22,23,25,
-5, 3:10:1,3,6,9,10,16,20,22,23,25,
-5, 3:10:1,3,6,9,10,11,16,20,22,25,
-5, 3:10:1,3,6,8,10,11,17,19,22,25,
-5, 3:10:1,3,5,10,20,21,22,23,24,25,
-5, 3:10:1,3,5,10,15,20,21,22,24,25,
-5, 3:10:1,3,5,10,14,21,22,23,24,25,
-5, 3:10:1,3,5,10,14,20,21,22,23,25,
-5, 3:10:1,3,5,10,11,20,21,22,24,25,
-5, 3:10:1,3,5,10,11,19,21,22,24,25,
-5, 3:10:1,3,5,10,11,19,20,21,22,25,
-5, 3:10:1,3,5,8,14,21,22,23,24,25,
-5, 3:10:1,3,5,8,14,20,21,22,23,25,
-5, 3:10:1,3,5,8,12,21,22,23,24,25,
-5, 3:10:1,3,5,8,12,16,21,23,24,25,
-5, 3:10:1,3,5,8,10,12,17,21,24,25,
-5, 3:10:1,3,5,8,10,12,16,21,24,25,
-5, 3:10:1,3,5,6,16,21,22,23,24,25,
-5, 3:10:1,3,5,6,15,17,21,22,24,25,
-5, 3:10:1,3,5,6,15,16,21,22,24,25,
-5, 3:10:1,3,5,6,15,16,17,22,24,25,
-5, 3:10:1,3,5,6,15,16,17,21,24,25,
-5, 3:10:1,3,5,6,12,21,22,23,24,25,
-5, 3:10:1,3,5,6,12,16,21,23,24,25,
-5, 3:10:1,3,5,6,11,16,21,22,24,25,
-5, 3:10:1,3,5,6,10,16,20,21,23,25,
-5, 3:10:1,3,5,6,10,15,17,20,21,25,
-5, 3:10:1,3,5,6,10,15,16,20,21,25,
-5, 3:10:1,3,5,6,10,15,16,17,21,25,
-5, 3:10:1,3,5,6,10,12,17,23,24,25,
-5, 3:10:1,3,5,6,10,11,19,20,21,25,
-5, 3:10:1,3,5,6,10,11,16,20,21,25,
-5, 3:10:1,3,5,6,10,11,16,19,21,25,
-5, 3:10:1,3,5,6,8,14,20,21,22,25,
-5, 3:10:1,3,5,6,8,14,19,21,22,25,
-5, 3:10:1,3,5,6,8,10,17,19,21,25,
-5, 3:10:1,3,4,6,10,16,17,20,23,25,
-5, 3:10:1,3,4,6,10,12,17,20,23,25,
-5, 3:10:1,3,4,5,15,17,21,22,24,25,
-5, 3:10:1,3,4,5,14,21,22,23,24,25,
-5, 3:10:1,3,4,5,14,20,21,22,23,25,
-5, 3:10:1,3,4,5,10,15,17,20,21,25,
-5, 3:10:1,3,4,5,8,18,21,22,23,25,
-5, 3:10:1,3,4,5,6,12,21,22,23,25,
-5, 3:10:1,3,4,5,6,12,18,21,23,25,
-5, 3:10:1,3,4,5,6,12,18,20,21,25,
-5, 3:10:1,3,4,5,6,12,16,21,23,25,
-5, 3:10:1,3,4,5,6,8,17,21,22,25,
-5, 3:10:1,2,8,9,11,15,20,21,22,25,
-5, 3:10:1,2,8,9,11,15,16,22,24,25,
-5, 3:10:1,2,5,10,14,16,18,21,23,25,
-5, 3:10:1,2,5,10,12,15,18,21,24,25,
-5, 3:10:1,2,5,10,11,12,18,21,24,25,
-5, 3:10:1,2,5,10,11,12,18,19,21,25,
-5, 3:10:1,2,5,9,14,16,18,21,23,25,
-5, 3:10:1,2,5,9,11,21,22,23,24,25,
-5, 3:10:1,2,5,9,11,12,19,21,22,25,
-5, 3:10:1,2,5,9,10,11,20,21,23,25,
-5, 3:10:1,2,5,9,10,11,12,16,21,25,
-5, 3:10:1,2,5,8,14,15,16,21,24,25,
-5, 3:10:1,2,5,8,11,14,16,21,24,25,
-5, 3:10:1,2,5,8,11,14,15,16,21,25,
-5, 3:10:1,2,5,8,10,11,15,20,21,25,
-5, 3:10:1,2,5,8,10,11,15,16,21,25,
-5, 3:10:1,2,5,7,16,18,21,23,24,25,
-5, 3:10:1,2,4,10,11,15,17,22,24,25,
-5, 3:10:1,2,4,10,11,15,17,18,24,25,
-5, 3:10:1,2,4,9,15,16,22,23,24,25,
-5, 3:10:1,2,4,9,11,15,16,22,24,25,
-5, 3:10:1,2,4,9,10,11,20,21,23,25,
-5, 3:10:1,2,4,5,15,21,22,23,24,25,
-5, 3:10:1,2,4,5,11,21,22,23,24,25,
-5, 3:10:1,2,4,5,11,15,21,22,24,25,
-5, 3:10:1,2,4,5,10,15,20,21,23,25,
-5, 3:10:1,2,4,5,10,11,20,21,23,25,
-5, 3:10:1,2,4,5,10,11,15,20,21,25,
-5, 3:10:1,2,4,5,9,11,21,22,23,25,
-5, 3:10:1,2,4,5,9,11,20,21,23,25,
-5, 3:10:1,2,4,5,8,11,15,20,21,25,
-5, 3:10:1,2,4,5,8,11,15,16,21,25,
-5, 3:10:1,2,4,5,7,15,21,23,24,25,
-5, 3:10:1,2,4,5,7,15,16,21,23,25,
-5, 3:10:1,2,4,5,6,15,16,21,23,25,
-5, 3:10:1,2,4,5,6,11,16,21,23,25,
-5, 3:10:1,2,4,5,6,11,15,16,21,25,
-5, 3:10:1,2,3,9,14,16,20,21,23,25,
-5, 3:10:1,2,3,9,10,11,12,19,22,25,
-5, 3:10:1,2,3,5,12,21,22,23,24,25,
-5, 3:10:1,2,3,5,12,16,21,23,24,25,
-5, 3:10:1,2,3,5,11,19,21,22,24,25,
-5, 3:10:1,2,3,5,10,14,21,23,24,25,
-5, 3:10:1,2,3,5,10,14,20,21,23,25,
-5, 3:10:1,2,3,5,10,14,18,21,23,25,
-5, 3:10:1,2,3,5,10,14,16,18,21,25,
-5, 3:10:1,2,3,5,8,18,21,23,24,25,
-5, 3:10:1,2,3,5,8,10,19,21,24,25,
-5, 3:10:1,2,3,5,6,11,16,19,21,25,
-5, 3:10:1,2,3,4,10,11,17,22,24,25,
-5, 3:10:1,2,3,4,5,21,22,23,24,25,
-5, 3:10:1,2,3,4,5,15,21,22,24,25,
-5, 3:10:1,2,3,4,5,15,17,21,24,25,
-5, 3:10:1,2,3,4,5,14,21,23,24,25,
-5, 3:10:1,2,3,4,5,14,20,21,23,25,
-5, 3:10:1,2,3,4,5,14,18,21,23,25,
-5, 3:10:1,2,3,4,5,12,21,22,23,25,
-5, 3:10:1,2,3,4,5,12,18,21,23,25,
-5, 3:10:1,2,3,4,5,12,16,21,23,25,
-5, 3:10:1,2,3,4,5,11,21,22,24,25,
-5, 3:10:1,2,3,4,5,11,19,21,22,25,
-5, 3:10:1,2,3,4,5,10,20,21,23,25,
-5, 3:10:1,2,3,4,5,10,15,20,21,25,
-5, 3:10:1,2,3,4,5,10,15,17,21,25,
-5, 3:10:1,2,3,4,5,10,11,20,21,25,
-5, 3:10:1,2,3,4,5,6,16,21,23,25,
-5, 3:10:1,2,3,4,5,6,15,16,21,25,
-5, 3:10:1,2,3,4,5,6,11,19,21,25,
-5, 3:10:1,2,3,4,5,6,11,16,21,25,
-5, 3:10:4,5,7,8,11,15,20,21,22,24,
-5, 3:10:3,5,7,10,12,16,20,21,23,24,
-5, 3:10:3,5,6,8,10,15,17,19,21,24,
-5, 3:10:3,5,6,7,10,16,20,21,23,24,
-5, 3:10:3,5,6,7,10,15,16,20,21,24,
-5, 3:10:3,4,5,6,7,14,15,17,21,24,
-5, 3:10:2,5,9,11,12,19,20,21,22,23,
-5, 3:10:2,5,7,9,11,16,18,20,21,23,
-5, 3:10:2,5,6,10,11,16,19,20,21,23,
-5, 3:10:2,4,5,7,11,20,21,22,23,24,
-5, 3:10:2,4,5,7,11,15,20,21,22,24,
-5, 3:10:2,4,5,6,11,15,19,21,22,24,
-5, 3:10:2,4,5,6,11,15,18,19,21,22,
-5, 3:10:2,3,5,6,10,16,19,20,21,23,
-5, 3:10:2,3,5,6,10,14,16,19,21,23,
-5, 3:10:2,3,4,5,6,15,19,21,22,24,
-5, 3:10:1,4,5,6,7,14,15,17,23,24,
-5, 3:10:1,3,6,8,10,15,17,19,21,22,
-5, 3:10:1,3,5,10,11,19,20,21,22,24,
-5, 3:10:1,3,5,6,10,14,19,21,22,23,
-5, 3:10:1,3,5,6,8,10,17,19,22,24,
-5, 3:10:1,2,9,10,11,12,19,20,21,22,
-5, 3:10:1,2,7,9,15,16,18,20,21,23,
-5, 3:10:1,2,5,10,11,15,18,19,21,22,
-5, 3:10:1,2,5,9,10,11,12,19,22,23,
-[1/2][0/2]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 3.
-Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 3.
+[0/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[0/64]All boards exhausted.
+[0/64]Max pieces:0
+[1/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[1/64]All boards exhausted.
+[1/64]Max pieces:0
+[29/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[29/64]All boards exhausted.
+[29/64]Max pieces:0
+[42/64][43/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[43/64]All boards exhausted.
+[43/64]Max pieces:0
+[49/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[49/64]All boards exhausted.
+[49/64]Max pieces:0
+[52/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[52/64]All boards exhausted.
+[52/64]Max pieces:0
+[3/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[3/64]All boards exhausted.
+[3/64]Max pieces:0
+[9/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[9/64]All boards exhausted.
+[9/64]Max pieces:0
+[14/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[14/64]All boards exhausted.
+[14/64]Max pieces:0
+[15/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[15/64]All boards exhausted.
+[15/64]Max pieces:0
+[18/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[18/64]All boards exhausted.
+[18/64]Max pieces:0
+[20/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[20/64]All boards exhausted.
+[20/64]Max pieces:0
+[21/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[21/64]All boards exhausted.
+[21/64]Max pieces:0
+[24/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[24/64]All boards exhausted.
+[24/64]Max pieces:0
+[26/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[26/64]All boards exhausted.
+[26/64]Max pieces:0
+[30/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[30/64]All boards exhausted.
+[30/64]Max pieces:0
+[33/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[33/64]All boards exhausted.
+[33/64]Max pieces:0
+[37/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[37/64]All boards exhausted.
+[37/64]Max pieces:0
+[51/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[51/64]All boards exhausted.
+[51/64]Max pieces:0
+[53/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[53/64]All boards exhausted.
+[53/64]Max pieces:0
+[56/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[56/64]All boards exhausted.
+[56/64]Max pieces:0
+[57/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[57/64]All boards exhausted.
+[57/64]Max pieces:0
+[58/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[58/64]All boards exhausted.
+[58/64]Max pieces:0
+[13/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[13/64]All boards exhausted.
+[13/64]Max pieces:0
+[10/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[10/64]All boards exhausted.
+[10/64]Max pieces:0
+[39/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[39/64]All boards exhausted.
+[39/64]Max pieces:0
+[40/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[40/64]All boards exhausted.
+[40/64]Max pieces:0
+[44/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[44/64]All boards exhausted.
+[46/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[46/64]All boards exhausted.
+[46/64]Max pieces:0
+[44/64]Max pieces:0
+Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[42/64]All boards exhausted.
+[42/64]Max pieces:0
+[16/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[16/64]All boards exhausted.
+[16/64]Max pieces:0
+[45/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[45/64]All boards exhausted.
+[45/64]Max pieces:0
+[22/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[22/64]All boards exhausted.
+[22/64]Max pieces:0
+[12/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[12/64]All boards exhausted.
+[12/64]Max pieces:0
+[48/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[48/64]All boards exhausted.
+[48/64]Max pieces:0
+[5/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[62/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[62/64]All boards exhausted.
+[62/64]Max pieces:0
+[5/64]All boards exhausted.
+[5/64]Max pieces:0
+[11/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[11/64]All boards exhausted.
+[11/64]Max pieces:0
+[34/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[31/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[38/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[50/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[50/64]All boards exhausted.
+[50/64]Max pieces:0
+[31/64]All boards exhausted.
+[31/64]Max pieces:0
+[38/64]All boards exhausted.
+[38/64]Max pieces:0
+[34/64][36/64][25/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[25/64]All boards exhausted.
+[25/64]Max pieces:0
+Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[36/64]All boards exhausted.
+[36/64]Max pieces:0
+All boards exhausted.
+[34/64]Max pieces:0
+[41/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[41/64]All boards exhausted.
+[41/64]Max pieces:0
+[61/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[61/64]All boards exhausted.
+[61/64]Max pieces:0
+[35/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[35/64]All boards exhausted.
+[4/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[4/64]All boards exhausted.
+[4/64]Max pieces:0
+[28/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[28/64]All boards exhausted.
+[28/64]Max pieces:0
+[35/64]Max pieces:0
+[8/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[8/64]All boards exhausted.
+[8/64]Max pieces:0
+[19/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[19/64]All boards exhausted.
+[19/64]Max pieces:0
+[27/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[27/64]All boards exhausted.
+[27/64]Max pieces:0
+[60/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[60/64]All boards exhausted.
+[60/64]Max pieces:0
+[63/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[63/64]All boards exhausted.
+[63/64]Max pieces:0
+[47/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[47/64]All boards exhausted.
+[47/64]Max pieces:0
+[55/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[55/64]All boards exhausted.
+[55/64]Max pieces:0
+[7/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[7/64]All boards exhausted.
+[17/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[17/64]All boards exhausted.
+[17/64]Max pieces:0
+[32/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[32/64]All boards exhausted.
+[32/64]Max pieces:0
+[54/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[54/64]All boards exhausted.
+[54/64]Max pieces:0
+[7/64]Max pieces:0
+[2/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[2/64]All boards exhausted.
+[2/64]Max pieces:0
+[59/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[59/64]All boards exhausted.
+[59/64]Max pieces:0
+[6/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[6/64]All boards exhausted.
+[6/64]Max pieces:0
+[23/64]Run with 9(3*3) board in 2 blocks(bytes),every queen must attack 8.
+[23/64]All boards exhausted.
+[23/64]Max pieces:0
+[0/64]Final max pieces:0
+[4/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[9/64][16/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[17/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[28/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[44/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[45/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[49/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[60/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[0/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[2/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[6/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[13/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[23/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[24/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[42/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[43/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[48/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[56/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[57/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[58/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[63/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[3/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[26/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[10/64][52/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[40/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[6/64][17/64]All boards exhausted.
+[17/64]Max pieces:0
+[4/64]All boards exhausted.
+[4/64]Max pieces:0
+[16/64]All boards exhausted.
+[16/64]Max pieces:0
+[28/64]All boards exhausted.
+[28/64]Max pieces:0
+[44/64]All boards exhausted.
+[44/64]Max pieces:0
+[45/64]All boards exhausted.
+[45/64]Max pieces:0
+[49/64]All boards exhausted.
+[49/64]Max pieces:0
+[2/64]All boards exhausted.
+[2/64]Max pieces:0
+[42/64]All boards exhausted.
+[42/64]Max pieces:0
+[43/64]All boards exhausted.
+[43/64]Max pieces:0
+[56/64]All boards exhausted.
+[56/64]Max pieces:0
+[0/64]All boards exhausted.
+[0/64]Max pieces:0
+[3/64]All boards exhausted.
+[3/64]Max pieces:0
+[13/64]All boards exhausted.
+[13/64]Max pieces:0
+[48/64]All boards exhausted.
+[48/64]Max pieces:0
+[63/64]All boards exhausted.
+[63/64]Max pieces:0
+[24/64]All boards exhausted.
+[24/64]Max pieces:0
+[26/64]All boards exhausted.
+[26/64]Max pieces:0
+[57/64][23/64]All boards exhausted.
+[23/64]Max pieces:0
+[41/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[12/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[1/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[62/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+All boards exhausted.
+[57/64]Max pieces:0
+[15/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[27/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[36/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[37/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[46/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[59/64][30/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[54/64][41/64]All boards exhausted.
+[41/64]Max pieces:0
+Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[9/64]All boards exhausted.
+[9/64][29/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[35/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[50/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[33/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[51/64]Max pieces:0
+[18/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[10/64]All boards exhausted.
+[10/64]Max pieces:0
+Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[15/64]All boards exhausted.
+[15/64]Max pieces:0
+[27/64]All boards exhausted.
+[27/64]Max pieces:0
+[36/64]All boards exhausted.
+[36/64]Max pieces:0
+[37/64]All boards exhausted.
+[37/64]Max pieces:0
+[46/64]All boards exhausted.
+[46/64]Max pieces:0
+[62/64]All boards exhausted.
+[62/64]Max pieces:0
+[5/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[22/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[30/64]All boards exhausted.
+[30/64]Max pieces:0
+[54/64]All boards exhausted.
+[54/64]Max pieces:0
+[33/64]All boards exhausted.
+[33/64]Max pieces:0
+[50/64]All boards exhausted.
+[50/64]Max pieces:0
+[29/64]All boards exhausted.
+[29/64]Max pieces:0
+[35/64]All boards exhausted.
+[35/64]Max pieces:0
+[18/64][14/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[21/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[31/64][47/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[5/64]All boards exhausted.
+[5/64]Max pieces:0
+[22/64]All boards exhausted.
+[22/64]Max pieces:0
+Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[8/64][32/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[39/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[25/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[14/64]All boards exhausted.
+[21/64]All boards exhausted.
+[21/64]Max pieces:0
+[47/64]All boards exhausted.
+[47/64]Max pieces:0
+[14/64]Max pieces:0
+[20/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[31/64]All boards exhausted.
+[31/64]Max pieces:0
+[52/64]All boards exhausted.
+[52/64]Max pieces:0
+[55/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[12/64]All boards exhausted.
+[12/64]Max pieces:0
+[51/64]All boards exhausted.
+[51/64]Max pieces:0
+[7/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[40/64]All boards exhausted.
+[40/64]Max pieces:0
+[11/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[59/64]All boards exhausted.
+[59/64]Max pieces:0
+[25/64]All boards exhausted.
+[25/64]Max pieces:0
+[32/64]All boards exhausted.
+[32/64]Max pieces:0
+[39/64]All boards exhausted.
+[39/64]Max pieces:0
+[58/64]All boards exhausted.
+[58/64]Max pieces:0
+[20/64]All boards exhausted.
+[20/64]Max pieces:0
+All boards exhausted.
+[18/64]Max pieces:0
+[61/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[55/64]All boards exhausted.
+[55/64]Max pieces:0
+[7/64]All boards exhausted.
+[7/64]Max pieces:0
+[1/64]All boards exhausted.
+[1/64]Max pieces:0
+[11/64]All boards exhausted.
+[11/64]Max pieces:0
+Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[61/64]All boards exhausted.
+[61/64]Max pieces:0
+[34/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[53/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[60/64]All boards exhausted.
+[60/64]Max pieces:0
+[8/64]All boards exhausted.
+[8/64]Max pieces:0
+[38/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[34/64]All boards exhausted.
+[34/64]Max pieces:0
+[53/64]All boards exhausted.
+[53/64]Max pieces:0
+All boards exhausted.
+[6/64]Max pieces:0
+[19/64]Run with 16(4*4) board in 2 blocks(bytes),every queen must attack 8.
+[38/64]All boards exhausted.
+[38/64]Max pieces:0
+[19/64]All boards exhausted.
+[19/64]Max pieces:0
+[0/64]Final max pieces:0
+[22/64][38/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[43/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[3/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[7/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[8/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[13/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[18/64][21/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[23/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[36/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[39/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[42/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[45/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[56/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[62/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[2/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[4/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[17/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[30/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[35/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[44/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[48/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[61/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[34/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[26/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[49/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[50/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[14/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[6/64][27/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[29/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[51/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[5/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[46/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[47/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[15/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[54/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[60/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[11/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[57/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[12/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[55/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[19/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[59/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[0/64][10/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[16/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[20/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[40/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[52/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[58/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[9/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[24/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[41/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[32/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[53/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[63/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[1/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[25/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[33/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[31/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[37/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[28/64]Run with 25(5*5) board in 4 blocks(bytes),every queen must attack 8.
+[30/64]All boards exhausted.
+[30/64]Max pieces:0
+[48/64]All boards exhausted.
+[48/64]Max pieces:0
+[41/64]All boards exhausted.
+[41/64]Max pieces:0
+[23/64]All boards exhausted.
+[23/64]Max pieces:0
+[60/64]All boards exhausted.
+[60/64]Max pieces:0
+[42/64]All boards exhausted.
+[42/64]Max pieces:0
+[0/64]All boards exhausted.
+[0/64]Max pieces:0
+[45/64]All boards exhausted.
+[45/64]Max pieces:0
+[51/64]All boards exhausted.
+[51/64]Max pieces:0
+[38/64]All boards exhausted.
+[38/64]Max pieces:0
+[10/64]All boards exhausted.
+[10/64]Max pieces:0
+[63/64]All boards exhausted.
+[63/64]Max pieces:0
+[16/64]All boards exhausted.
+[16/64]Max pieces:0
+[43/64]All boards exhausted.
+[43/64]Max pieces:0
+[4/64]All boards exhausted.
+[4/64]Max pieces:0
+[49/64]All boards exhausted.
+[49/64]Max pieces:0
+[25/64]All boards exhausted.
+[25/64]Max pieces:0
+[13/64]All boards exhausted.
+[13/64]Max pieces:0
+[17/64]All boards exhausted.
+[17/64]Max pieces:0
+[18/64]All boards exhausted.
+[18/64]Max pieces:0
+[1/64]All boards exhausted.
+[1/64]Max pieces:0
+[24/64]All boards exhausted.
+[24/64]Max pieces:0
+[50/64]All boards exhausted.
+[50/64]Max pieces:0
+[7/64][12/64]All boards exhausted.
+[12/64]Max pieces:0
+All boards exhausted.
+[7/64]Max pieces:0
+[58/64][47/64]All boards exhausted.
+[47/64]Max pieces:0
+[37/64]All boards exhausted.
+[58/64]Max pieces:0
+[20/64][15/64]All boards exhausted.
+[37/64]Max pieces:0
+All boards exhausted.
+[20/64]Max pieces:0
+[14/64]All boards exhausted.
+[14/64]Max pieces:0
+All boards exhausted.
+[15/64]Max pieces:0
+[29/64]All boards exhausted.
+[29/64]Max pieces:0
+[34/64]All boards exhausted.
+[34/64]Max pieces:0
+[22/64]All boards exhausted.
+[22/64]Max pieces:0
+[5/64]All boards exhausted.
+[5/64]Max pieces:0
+[52/64]All boards exhausted.
+[52/64]Max pieces:0
+[56/64]All boards exhausted.
+[56/64]Max pieces:0
+[26/64]All boards exhausted.
+[26/64]Max pieces:0
+[27/64]All boards exhausted.
+[27/64]Max pieces:0
+[62/64]All boards exhausted.
+[62/64]Max pieces:0
+[57/64]All boards exhausted.
+[57/64]Max pieces:0
+[21/64]All boards exhausted.
+[21/64]Max pieces:0
+[8/64]All boards exhausted.
+[8/64]Max pieces:0
+[11/64]All boards exhausted.
+[11/64]Max pieces:0
+[28/64]All boards exhausted.
+[28/64]Max pieces:0
+[35/64]All boards exhausted.
+[35/64]Max pieces:0
+[33/64]All boards exhausted.
+[33/64]Max pieces:0
+[54/64]All boards exhausted.
+[54/64]Max pieces:0
+[44/64]All boards exhausted.
+[44/64]Max pieces:0
+[59/64]All boards exhausted.
+[59/64]Max pieces:0
+[36/64]All boards exhausted.
+[36/64]Max pieces:0
+[2/64]All boards exhausted.
+[2/64]Max pieces:0
+[31/64]All boards exhausted.
+[31/64]Max pieces:0
+[19/64]All boards exhausted.
+[19/64]Max pieces:0
+[40/64]All boards exhausted.
+[40/64]Max pieces:0
+[39/64][6/64]All boards exhausted.
+[6/64]Max pieces:0
+All boards exhausted.
+[39/64]Max pieces:0
+[61/64]All boards exhausted.
+[61/64]Max pieces:0
+[32/64][46/64]All boards exhausted.
+[32/64]Max pieces:0
+All boards exhausted.
+[46/64]Max pieces:0
+[53/64][3/64]All boards exhausted.
+[3/64]Max pieces:0
+[55/64]All boards exhausted.
+[55/64]Max pieces:0
+[9/64]All boards exhausted.
+[9/64]Max pieces:0
+All boards exhausted.
+[53/64]Max pieces:0
+[0/64]Final max pieces:0
+[1/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[18/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[27/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[51/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[53/64][63/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[3/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[11/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[15/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[17/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[19/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[39/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[45/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[48/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[57/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[9/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[13/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[16/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[30/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[59/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[28/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[32/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[33/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[52/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[31/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[37/64][36/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[24/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[50/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[12/64][40/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[7/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[49/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[43/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[35/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[20/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[55/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[41/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[61/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[22/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[25/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[54/64][5/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[58/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[62/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[56/64][38/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[60/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[23/64][4/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[14/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[8/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[10/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[34/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[0/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[29/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[21/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[42/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[46/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[2/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[44/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[6/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[47/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
+[26/64]Run with 36(6*6) board in 5 blocks(bytes),every queen must attack 8.
